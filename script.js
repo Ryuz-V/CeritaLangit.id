@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let progress = Math.min(scrollTop / maxScroll, 1);
     
-    // PERUBAHAN: Progress hanya berubah 30% dari scroll actual
-    progress = progress * -0.1; // Ubah angka 0.3 untuk mengatur kecepatan
+    progress = progress * -0.1; 
     
     const currentTemp = Math.round(startTemp + (endTemp - startTemp) * progress);
 

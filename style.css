@@ -1,234 +1,363 @@
-:root {
-    --pos-left: flex-start;      
-  --pos-left-center: center;    
-  --pos-center: center;         
-  --pos-right-center: center;   
-    --pos-right: flex-end;
-    --white #fffff;
-    --black: #000000;
+  :root {
+      --pos-left: flex-start;      
+    --pos-left-center: center;    
+    --pos-center: center;         
+    --pos-right-center: center;   
+      --pos-right: flex-end;
+      --white #fffff;
+      --black: #000000;
 
-}
+  }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  scroll-behavior: smooth;
-  background: 
-    linear-gradient(to bottom, #42aaff 0%, #0073ff 50%, #9bc8ff 100%), 
-    repeating-linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.1) 0,
-      rgba(255, 255, 255, 0.1) 1px,
-      transparent 1px,
-      transparent 70px 
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.1) 0,
-      rgba(255, 255, 255, 0.1) 1px,
-      transparent 1px,
-      transparent 80px
-    );
-  background-blend-mode: overlay;
-  font-family: 'Cantarell', sans-serif;
-  overflow-x: none;
-}
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    background: 
+      linear-gradient(to bottom, #42aaff 0%, #0073ff 50%, #9bc8ff 100%), 
+      repeating-linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.1) 0,
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px,
+        transparent 70px 
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.1) 0,
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px,
+        transparent 80px
+      );
+    background-blend-mode: overlay;
+    font-family: 'Cantarell', sans-serif;
+      overflow-x: hidden;
+  max-width: 100vw;
+  }
 
-.main-scroll {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column-reverse;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
+  .main-scroll {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
 
-p {
-  color: #fff;
-}
+  p {
+    color: #fff;
+  }
 
-    header {
-      position: fixed;
-      top: 0;
-      left: 10px;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-}
+      header {
+        position: fixed;
+        top: 0;
+        left: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+  }
 
-    .logo img {
-      width: 175px;
-      z-index: 2000;
+      .logo img {
+        width: 175px;
+        z-index: 2000;
+      }
+
+      .bg1 { background: linear-gradient(to top, #1e3a8a, #38bdf8); }
+      .bg2 { background: linear-gradient(to top, #2563eb, #60a5fa); }
+      .bg3 { background: linear-gradient(to top, #0ea5e9, #bae6fd); }
+
+  .celcius {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .celcius object {
+    width: 10px;
+    margin-right: 10px;
+  } 
+
+  .grass {
+    width: 100%;
+    margin-bottom: -50px;
+  }
+
+  .woodcock, .fireworks {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .fireworks {
+    right: 30px;  
+    top: 35%;         
+  }
+
+  .woodcock {
+    left: 30px;       
+    top: 65%;
+    margin-left: 50px;        
+  }
+
+  .woodcock img {
+    width: 25%;
+    height: auto;
+    margin-left: 150px; 
+  }
+
+  .fireworks img {
+    width: 200px;
+    height: auto;
+    margin-right: 100px; 
+  }
+
+  .fireworks p {
+    margin-top: 1px;
+    font-weight: normal;
+    margin-right: 80px;
+  }
+
+  .woodcock p {
+    margin-top: 15px;
+    font-weight: normal;
+    margin-left: 160px;
+  }
+
+
+  .header-text {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .header-text.scrolled {
+    color: #a8d0ff;
+    transform: scale(1.1);
+  }
+
+  .main-scroll {
+    overflow-y: scroll;
+    height: 100vh;
+  }
+
+  .air-balloon {
+    position: absolute;
+    right: 60px;
+    top: -22%;
+    margin-right: 100px;
+  }
+
+  .air-balloon img {
+    width: 50%;
+    height: auto;
+  }
+
+  .air-balloon p {
+    font-weight: normal;
+    margin-left: 30px;
+  }
+
+  .mallard-migrate {
+    position: absolute;
+    left: 300px;
+    top: -25%;
+    margin-right: 100px;
+  }
+
+  .mallard-migrate img {
+    width: 50%;
+    height: auto;
+  }
+
+  .mallard-migrate p {
+    font-weight: normal;
+    margin-left: 30px;
+  }
+
+  .bleriot {
+    position: absolute;
+    right: 60px;
+    top: -60%;
+    margin-right: 150px;
+  }
+
+  .bleriot img {
+    width: 60%;
+  }
+
+  .bleriot p {
+    font-weight: normal;
+    margin-left: 30px;
+  }
+
+  .cloud-1 {
+    position: absolute;
+    right: 60px;
+    top: -120%;
+    margin-right: 150px;
+    animation: slideCloud 380s infinite linear;
+  }
+
+  .cloud-1 img {
+    width: 1400px;
+    opacity: 0.8;
+  }
+
+  @keyframes slideCloud {
+    0% {
+      transform: translateX(0);
     }
-
-    .bg1 { background: linear-gradient(to top, #1e3a8a, #38bdf8); }
-    .bg2 { background: linear-gradient(to top, #2563eb, #60a5fa); }
-    .bg3 { background: linear-gradient(to top, #0ea5e9, #bae6fd); }
-
-.celcius {
-  position: absolute;
-  top: 0;
-  right: 30px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.celcius object {
-  width: 10px;
-  margin-right: 10px;
-} 
-
-.grass {
-  width: 100%;
-  margin-bottom: -50px;
-}
-
-.woodcock, .fireworks {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.fireworks {
-  right: 30px;  
-  top: 35%;         
-}
-
-.woodcock {
-  left: 30px;       
-  top: 65%;
-  margin-left: 50px;        
-}
-
-.woodcock img {
-  width: 25%;
-  height: auto;
-  margin-left: 150px; 
-}
-
-.fireworks img {
-  width: 200px;
-  height: auto;
-  margin-right: 100px; 
-}
-
-.fireworks p {
-  margin-top: 1px;
-  font-weight: normal;
-  margin-right: 80px;
-}
-
-.woodcock p {
-  margin-top: 15px;
-  font-weight: normal;
-  margin-left: 160px;
-}
-
-
-.header-text {
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.header-text.scrolled {
-  color: #a8d0ff;
-  transform: scale(1.1);
-}
-
-.main-scroll {
-  overflow-y: scroll;
-  height: 100vh;
-}
-
-.air-balloon {
-  position: absolute;
-  right: 60px;
-  top: -22%;
-  margin-right: 100px;
-}
-
-.air-balloon img {
-  width: 50%;
-  height: auto;
-}
-
-.air-balloon p {
-  font-weight: normal;
-  margin-left: 30px;
-}
-
-.mallard-migrate {
-  position: absolute;
-  left: 300px;
-  top: -25%;
-  margin-right: 100px;
-}
-
-.mallard-migrate img {
-  width: 50%;
-  height: auto;
-}
-
-.mallard-migrate p {
-  font-weight: normal;
-  margin-left: 30px;
-}
-
-.bleriot {
-  position: absolute;
-  right: 60px;
-  top: -60%;
-  margin-right: 150px;
-}
-
-.bleriot img {
-  width: 60%;
-}
-
-.bleriot p {
-  font-weight: normal;
-  margin-left: 30px;
-}
-
-.cloud-1 {
-  position: absolute;
-  right: 60px;
-  top: -120%;
-  margin-right: 150px;
-  animation: slideCloud 380s infinite linear;
-}
-
-.cloud-1 img {
-  width: 1400px;
-  opacity: 0.8;
-}
-
-@keyframes slideCloud {
-  0% {
-    transform: translateX(0);
+    100% {
+      transform: translateX(2000px);
+    }
   }
-  100% {
-    transform: translateX(2000px);
+
+  .content-1 {
+    position: absolute;
+    left: 20%;
+    top: -60%;
+    z-index: 1;
+    background-color: white;
+    border: 2px solid black;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
   }
-}
 
-.content-1 {
-  position: absolute;
-  left: 60px;
-  top: -50%;
-  z-index: 1;
-  
-}
+  .content-1 h5 {
+    margin: 0;
+    color: black;
+    font-family: 'Cantarell', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: center;
+  }
 
-.osprey {
-  position: absolute;
-  left: 60px;
-  top: -100%;
-}
+  .osprey {
+    position: absolute;
+    left: 500px;
+    top: -100%;
+  }
+
+    .osprey img {
+      width: 50%;
+  }
+
+    .osprey p {
+    font-weight: normal;
+    margin-left: 40px;
+  }
+
+  .content-2 {
+    position: absolute;
+    left: 40%;
+    top: -120%;
+    z-index: 1;
+    background-color: white;
+    border: 2px solid black;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+  }
+
+  .content-2 h5 {
+    margin: 0;
+    color: black;
+    font-family: 'Cantarell', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+    .cloud-2 {
+    position: absolute;
+    left: 100px;
+    top: -180%;
+    margin-right: 150px;
+    animation: slideCloud2 380s infinite linear;
+  }
+
+  .cloud-2 img {
+    width: 1400px;
+    opacity: 0.8;
+  }
+
+  @keyframes slideCloud2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-2000px);
+    }
+  }
+
+    .content-3 {
+    position: absolute;
+    right: 20%;
+    top: -170%;
+    z-index: 1;
+    background-color: white;
+    border: 2px solid black;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+  }
+
+  .content-3 h5 {
+    margin: 0;
+    color: black;
+    font-family: 'Cantarell', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+    .layang-gantung {
+    position: absolute;
+    right: 60px;
+    top: -150%;
+    margin-right: 50px;
+    z-index: 1;
+  }
+
+  .layang-gantung img {
+    width: 50%;
+  }
+
+  .layang-gantung p {
+    font-weight: normal;
+    margin-right: 35px;
+  }
+
+      .pigeon {
+    position: absolute;
+    left: 200px;
+    top: -152%;
+    z-index: 1;
+    margin-left: 0;
+  }
+
+  .pigeon img {
+    width: 50%;
+    margin-left: 10px;
+  }
+
+  .pigeon p {
+    font-weight: normal;
+    margin-right: 100px;
+  }
